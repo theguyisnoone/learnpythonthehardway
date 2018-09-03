@@ -1,0 +1,2 @@
+# learnpythonthehardway
+learn code 
