@@ -58,22 +58,17 @@ def  parse_object(word_list):
         raise ParserError("Excepted a noun or a direction")
 
 
-def parse_subject(word_list, subj):
-    verb = parse_verb(word_list)
 
-    obj = parse_object(word_list)
-
-    return Sentence(subj, verb, obj)
 
 
 def parse_subject(word_list):
     skip(word_list,'stop')
     next_word=peek(word_list)
 
-    if next_word=="noun":
-        return  match(word_list,"noun")
-    elif next_word=="verb":
-        return("noun",'player')
+    if next_word=='noun':
+        return  match(word_list,'noun')
+    elif next_word=='verb':
+        return('noun','player')
     else:
         raise ParserError("Expected a verb next.")
 

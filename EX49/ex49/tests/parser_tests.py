@@ -20,3 +20,7 @@ def test_object():
 	assert_equal(parser.parse_object([('direction','north')]),('direction','north'))
 	assert_equal(parser.parse_object([('noun','bear')]),('noun','bear'))
 	assert_raises(parser.ParserError, parser.parse_object, [('verb', 'kill'), ('stop', 'of'), ('verb', 'go')])
+
+
+def test_subject():
+	assert_equal(parser.parse_subject([('noun','me')]),('noun','me'))
