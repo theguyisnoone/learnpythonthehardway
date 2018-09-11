@@ -1,0 +1,11 @@
+make a .venvs directory and fill it with a virtual environment
+
+mkdir .venvs
+
+virtualenv --system-site-packages .venvs/lpthw
+
+ .\.venvs\lpthw\Scripts\activate
+
+
+
+set-executionpolicy remotesigned  要在管理员身份下
